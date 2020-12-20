@@ -47,3 +47,4 @@ class Solution(object):
                     q.append(node.right)
             result.append(level)
         return result
+        
