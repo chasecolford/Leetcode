@@ -6,13 +6,11 @@ from sortedcontainers import SortedList
 class Solution:
     def countSmaller(self, nums: List[int]) -> List[int]:
         sortedList = SortedList()
-        counts = []
-        nums.reverse()
+        counts = [0] * len(nums)
         
-        for num in nums:
-            index = sortedList.bisect_left(num)
-            counts.append(index)
-            sortedList.add(num)
-        counts.reverse()
+        for i in range(len(nums)-1, -1, -1):
+            index = sortedList.bisect_left(nums[i])
+            counts[i] = index
+            sortedList.add(nums[i])
         return counts
         
