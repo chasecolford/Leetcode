@@ -1,5 +1,6 @@
-**.vscode/*
+**.vscode
 /Contest
 /Misc
-/.vscode/*
-.vscode/*
+/.vscode
+.vscode
+**/tasks.json
